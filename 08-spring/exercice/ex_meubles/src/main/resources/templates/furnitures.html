@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Furnitures</title>
+    <span th:replace="~{home :: cssImports}"></span>
+</head>
+<body>
+
+<span th:replace="~{home :: header}"></span>
+
+<main>
+    <div class="center">
+        <a th:href="@{/furnitures/add}" class="add btn">Add a furniture</a>
+
+        <section class="list_of">
+            <p class="empty" th:if="${furnitures.isEmpty()}">No furniture available</p>
+            <table th:unless="${furnitures.isEmpty()}">
+                <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Actions</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr th:each="f : ${furnitures}">
+                    <td th:text="${f.getName()}"></td>
+                    <td class="actions">
+                        <a th:href="@{/furnitures/add{id}(id=${f.getFurnitureId()})}"><img th:src="@{/img/view.png}" alt="view" title="View furniture"></a>
+                        <a th:href="@{/furnitures/delete(id=${f.getFurnitureId()})}"><img th:src="@{/img/poubelle.png}" alt="delete" title="delete furniture"></a>
+                        <form th:action="@{cart/add(furnitureId=${f.getFurnitureId()})}" method="post" th:object="${cartItem}" >
+                            <input type="number" th:field="*{quantity}">
+                            <button>Add to cart</button>
+                        </form>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+            <p th:if="${errMessage != ''}" th:text="${errMessage}" class="error"></p>
+        </section>
+    </div>
+</main>
+
+</body>
+</html>

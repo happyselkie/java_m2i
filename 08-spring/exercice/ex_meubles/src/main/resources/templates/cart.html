@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Cart</title>
+</head>
+<body>
+
+<main>
+    <section class="list_of">
+        <p class="empty" th:if="${cartItems.isEmpty()}">The cart is empty</p>
+        <table th:unless="${cartItems.isEmpty()}">
+            <thead>
+            <tr>
+                <th>Furniture</th>
+                <th>Quantity</th>
+                <th>Total</th>
+                <th>Actions</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr th:each="c : ${cartItems}">
+                <td th:text="${c.getFurniture().getName()}"></td>
+                <td th:text="${c.getQuantity()}"></td>
+                <td th:text="${c.getQuantity() * c.getFurniture().getPrice()} + '€'"></td>
+                <td class="actions">
+                    <a th:href="@{/cart/delete(id=${f.getId()})}">Delete</a>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </section>
+    <a th:href="@{/cart/clear}">Clear Cart</a>
+</main>
+
+</body>
+</html>

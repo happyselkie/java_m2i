@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Home</title>
+    <th:block th:fragment="cssImports">
+        <link rel="stylesheet" type="text/css" th:href="@{/style/style.css}">
+    </th:block>
+</head>
+<body>
+<main>
+    <th:block th:fragment="header">
+        <header>
+            <div class="center">
+                <a th:href="@{/}" class="logo">Furnitures !</a>
+                <nav>
+                    <a th:href="@{/furnitures/list}">List</a>
+                    <a th:href="@{/furnitures/add}">Add new furniture</a>
+                    <a th:href="@{/cart/list}">Cart</a>
+                </nav>
+            </div>
+        </header>
+    </th:block>
+    <div class="center">
+        <h1><a th:href="@{/furnitures/list}">Get shopping !</a></h1>
+    </div>
+</main>
+</body>
+</html>

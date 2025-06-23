@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Furniture</title>
+    <span th:replace="~{home :: cssImports}"></span>
+</head>
+<body>
+
+<span th:replace="~{home :: header}"></span>
+
+<main class="recipe details">
+    <div class="center">
+
+        <form method="post" th:action="@{/furnitures/add}" th:object="${furniture}" class="form">
+            <input type="hidden" th:field="*{furnitureId}">
+            <fieldset>
+                <div>
+                    <h1>Furniture</h1>
+                </div>
+                <div class="field">
+                    <label for="name">Title : </label>
+                    <input type="text" id="name" th:field="*{name}" />
+                </div>
+                <div class="field">
+                    <label for="description">Description : </label>
+                    <input type="text" id="description" th:field="*{description}" />
+                </div>
+                <div class="field">
+                    <label for="price">Price : </label>
+                    <input type="number" id="price" th:field="*{price}" />
+                </div>
+                <div class="field">
+                    <label for="stock">Stock : </label>
+                    <input type="number" id="stock" th:field="*{stock}" />
+                </div>
+            </fieldset>
+            <button class="btn">save</button>
+        </form>
+    </div>
+</main>
+
+
+</body>
+</html>
