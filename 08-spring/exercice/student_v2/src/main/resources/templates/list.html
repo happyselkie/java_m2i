@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Liste</title>
+</head>
+<body>
+<span th:replace="~{home :: navbar}"></span>
+<h1>Liste</h1>
+
+<table th:unless="${students.isEmpty()}">
+    <thead>
+        <tr>
+            <th>#</th>
+            <th>Nom</th>
+            <th>Prenom</th>
+            <th>Detail</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr th:each="s : ${students}">
+            <td th:text="${s.id}"></td>
+            <td th:text="${s.firstName}"></td>
+            <td th:text="${s.lastName}"></td>
+            <td><a th:href="@{/student/{id}(id=${s.getId()})}" >Detail</a></td>
+        </tr>
+    </tbody>
+</table>
+</body>
+</html>

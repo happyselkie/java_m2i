@@ -1,0 +1,17 @@
+<th:block th:fragment="searchForm">
+    <form th:action="@{/search}" method="get" class="form search">
+        <p>Search a student :</p>
+        <div class="align">
+            <div class="fields">
+                <label><span>FirstName : </span>
+                    <input type="text" name="firstName"  />
+                </label>
+                <label><span>LastName : </span>
+                    <input type="text" name="lastName" />
+                </label>
+            </div>
+
+            <button class="btn">Search</button>
+        </div>
+    </form>
+</th:block>

@@ -1,0 +1,284 @@
+:root{
+    --light : #b2d8d8;
+    --title : #66b2b2;
+    --border : #008080;
+    --dark : #006666;
+    --text : #004c4c;
+}
+*{
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing:    border-box;
+    box-sizing:         border-box;
+}
+html{
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing:    border-box;
+    box-sizing:         border-box;
+    margin:             0;
+    padding:            0;
+    outline:            none;
+}
+
+body {
+    font-family:              Verdana, Geneva, Tahoma, sans-serif;
+    font-size:                16px;
+    background-color: 	#e5e5e5;
+    color: var(--text);
+    width:                    100%;
+    -webkit-font-smoothing:   antialiased;
+    -webkit-text-size-adjust: 100%;
+    max-width: 1920px;
+    margin: 0 auto;
+    overflow-x:hidden;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing:    border-box;
+    box-sizing:         border-box;
+}
+
+input[type=text], input[type=file], input[type=password], input[type=number], button, select, textarea {
+    font-family:              Verdana, Geneva, Tahoma, sans-serif;
+    font-size:   16px;
+    color:      #000;
+    border:      none;
+}
+
+textarea {
+    resize:   none;
+    overflow: auto;
+}
+
+button, a {cursor: pointer;}
+
+button {
+    background: transparent;
+    border:     none;
+}
+
+a{
+    border:          0;
+    text-decoration: none;
+    color:      inherit;
+}
+
+video {
+    max-width: 100%;
+    height:    auto;
+}
+
+table {border-collapse: collapse;}
+
+img {
+    border:          none;
+    max-width:       100%;
+    image-rendering: auto;
+    display: block;
+}
+figure{
+    padding: 0;
+    margin-block-start: 0;
+    margin-block-end: 0;
+    margin-inline-start: 0;
+    margin-inline-end: 0;
+}
+
+ul {list-style-type: none;}
+
+ul, ol {list-style-position: inside;}
+
+label {display: block;}
+
+canvas {-ms-touch-action: double-tap-zoom;}
+
+h1, h2, h3, h4, h5 {
+    font-weight: normal;
+    display:     block;
+}
+
+header, nav, footer, section, article, aside, figure, figcaption, mark, time, address {display: block;}
+
+sup, sub {text-transform: none;}
+
+div.center,
+section.center{
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+main{
+    width: 100%;
+    min-height: 100vh;
+    flex-flow: column nowrap;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 75px 25px 50px;
+}
+
+header{
+    padding: 15px 25px;
+    position : fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: var(--light);
+    border-bottom: 1px solid var(--border);
+}
+
+header .center{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .center .logo{
+    max-width: 150px;
+}
+
+header .center nav{
+    max-width: calc(100% - 200px);
+    display: flex;
+    justify-content: space-between;
+}
+header .center nav a{
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: 600;
+    color: var(--text);
+    position: relative;
+    font-size: 13px;
+}
+header .center nav a::after{
+    content: "";
+    position: absolute;
+    left:0;
+    bottom: -2px;
+    width: 100%;
+    height: 1px;
+    background-color: var(--text);
+}
+header .center nav a + a{
+    margin-left: 15px;
+}
+
+a.btn, button.btn{
+    display: inline-block;
+    color: var(--light);
+    background-color: var(--dark);
+    border: 1px solid var(--dark);
+    padding: 20px 30px 18px;
+    letter-spacing: 2px;
+    font-size: 13px;
+    text-transform: uppercase;
+    transition: all 0.5s;
+    width: max-content;
+    width: -moz-max-content;
+    max-width: 100%;
+    text-align: center;
+}
+
+main > .center h1{
+    background-color: var(--text);
+    padding: 25px 0;
+    border:  solid 	var(--border);
+    border-width: 3px 0 3px;
+    color: var(--light);
+    text-align: center;
+}
+
+main > .center h2{
+    text-align: center;
+}
+
+main.homepage > .center > nav{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+a.back{
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: 600;
+    color: var(--text);
+    position: relative;
+    font-size: 13px;
+}
+
+form.form div.fields{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+form.form div.fields label{
+    width: calc((100%/2) - 5px);
+}
+form.form.search{
+    max-width: calc(100% - 275px);
+}
+form.form.search > p{
+font-weight: 600;
+    margin: 0 0 5px;
+}
+form.form label input{
+    width: 100%;
+    padding: 5px 0 3px;
+    border-bottom: 1px solid var(--border);
+    color: var(--text);
+    background-color: transparent;
+    outline: none;
+}
+form.form label span{
+    font-size: 11px;
+    text-transform: uppercase;
+}
+form.form .btn{
+    margin-left: 5px;
+    padding: 10px 10px 8px;
+}
+main.student_list .cta{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+main.student_list .cta > .btn{
+    align-self: flex-end;
+}
+main.student_list .form.search .align{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+main.student_list .cta{
+    padding-bottom: 5px;
+    border-bottom: 3px solid var(--border);
+}
+main.student_list .list ul li{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    padding: 8px 5px;
+    border-bottom: 1px solid var(--border);
+}
+main.student_list .list ul li .infos{
+    width: calc(100% - 30px);
+}
+main.student_list .list ul li .actions a{
+    display: block;
+    max-width: 20px;
+}
+main.student_list .list ul li:first-child {
+    font-weight: 600;
+}
+main.student_list .list ul{
+    padding: 15px 25px 0;
+}
+main.student_details .portrayal{
+    max-width: 200px;
+    margin: 0 auto;
+}
+main.student_details .form .btn {
+    display: block;
+    margin: 15px auto;
+}

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Recipe List</title>
+    <span th:replace="~{home :: cssImports}"></span>
+</head>
+<body>
+
+<span th:replace="~{home :: header}"></span>
+
+<main class="list">
+    <div class="center">
+        <a th:href="@{/recipe/add}" class="add btn">Add a recipe</a>
+
+        <section class="list_of">
+            <p class="empty" th:if="${recipes.isEmpty()}">No recipe yet ;)</p>
+            <table th:unless="${recipes.isEmpty()}">
+                <thead>
+                <tr>
+                    <th>Recipe</th>
+                    <th>Actions</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr th:each="r : ${recipes}">
+                    <td th:text="${r.getName()}"></td>
+                    <td class="actions">
+                        <a th:href="@{/recipe/{id}(id=${r.getId()})}"><img th:src="@{/img/view.png}" alt="view" title="View recipe"></a>
+                        <a th:href="@{/recipe/delete(id=${r.getId()})}"><img th:src="@{/img/poubelle.png}" alt="delete" title="delete recipe"></a>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+        </section>
+    </div>
+</main>
+
+</body>
+</html>

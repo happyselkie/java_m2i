@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Student manager</title>
+    <th:block th:fragment="cssImports">
+        <link rel="stylesheet" type="text/css" th:href="@{/style/style.css}">
+    </th:block>
+</head>
+<body>
+<th:block th:fragment="header">
+    <header>
+        <div class="center">
+            <a th:href="@{/}" class="logo"><img th:src="@{/img/logo.png}" alt="Logo"></a>
+            <nav>
+                <a th:href="@{/students}">View all students</a>
+                <a th:href="@{/student/register}">Register a new student</a>
+            </nav>
+        </div>
+    </header>
+</th:block>
+
+<main class="homepage">
+    <div class="center">
+        <h1>Welcome to the students manager</h1>
+        <h2>What do you want to do ?</h2>
+
+        <nav>
+            <a th:href="@{students}" class="btn">View all students</a>
+            <a th:href="@{students}" class="btn">Register a new student</a>
+            <a th:href="@{students}" class="btn">Search a student</a>
+        </nav>
+    </div>
+</main>
+
+</body>
+</html>

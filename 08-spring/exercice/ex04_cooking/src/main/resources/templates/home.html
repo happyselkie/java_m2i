@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>My Cooking Book</title>
+    <th:block th:fragment="cssImports">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Caveat+Brush&family=Playpen+Sans:wght@100..800&display=swap" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" th:href="@{/style/style.css}">
+    </th:block>
+</head>
+<body>
+<th:block th:fragment="header">
+    <header>
+        <div class="center">
+            <a th:href="@{/}" class="logo caveat-brush-regular"><img th:src="@{/img/cuisine.png}" alt="">  My Cooking Book.</a>
+            <nav>
+                <a th:href="@{/recipes}">My recipes</a>
+                <a th:href="@{/categories}">My categories</a>
+            </nav>
+        </div>
+    </header>
+</th:block>
+
+<main class="home">
+    <div class="center">
+        <h1 class="caveat-brush-regular">
+            My cooking Book.
+        </h1>
+
+        <article class="options">
+            <div class="option">
+                <a th:href="@{/recipes}">
+                    My recipes
+                    <img th:src="@{/img/recette.svg}" alt="">
+                </a>
+            </div>
+            <div class="option">
+                <a th:href="@{/categories}">
+                    My Categories
+                    <img th:src="@{/img/liste-de-controle.svg}" alt="">
+                </a>
+            </div>
+        </article>
+
+    </div>
+
+
+</main>
+
+</body>
+</html>

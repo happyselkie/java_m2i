@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Student List</title>
+    <span th:replace="~{home :: cssImports}"></span>
+</head>
+<body>
+
+<span th:replace="~{home :: header}"></span>
+
+<main class="student_list">
+    <div class="center">
+        <section class="head">
+            <a th:href="@{/}" class="back">&#8592; Back to homepage</a>
+            <h1>List of all students</h1>
+        </section>
+
+        <section class="cta">
+            <span th:replace="~{form/search :: searchForm}"></span>
+            <a th:href="@{/student/register}" class="btn">Register a student</a>
+        </section>
+
+        <section class="list">
+            <p class="error" th:if="${error != null}"><span th:text="${error}"></span></p>
+            <ul th:unless="${students.isEmpty()}">
+                <li>
+                    <span class="infos">Firstname & Lastname</span>
+                    <span class="actions">Actions</span>
+                </li>
+                <li th:each="s : ${students}">
+                <span class="infos">
+                    <span th:text="${s.getFirstName()}"></span>&nbsp;<span th:text="${s.getLastName()}"></span>
+                </span>
+                    <span class="actions">
+                    <a th:href="@{/student/{id}(id=${s.getId()})}"><img th:src="@{/img/view.png}" alt="view" title="View student"></a>
+                </span>
+                </li>
+            </ul>
+            <p th:if="${students.isEmpty()}">There's no student.</p>
+        </section>
+    </div>
+</main>
+
+</body>
+</html>

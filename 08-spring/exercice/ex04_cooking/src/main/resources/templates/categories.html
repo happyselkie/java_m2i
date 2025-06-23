@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Categories List</title>
+    <span th:replace="~{home :: cssImports}"></span>
+</head>
+<body>
+
+<span th:replace="~{home :: header}"></span>
+
+<main class="list">
+    <div class="center">
+        <a th:href="@{/category/add}" class="add btn">Add a category</a>
+
+        <section class="list_of">
+            <p class="empty" th:if="${categories.isEmpty()}">No category yet ;)</p>
+            <table th:unless="${categories.isEmpty()}">
+                <thead>
+                <tr>
+                    <th>Category</th>
+                    <th>Actions</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr th:each="c : ${categories}">
+                    <td th:text="${c.getName()}"></td>
+                    <td class="actions">
+                        <a th:href="@{/category/{id}(id=${c.getId()})}"><img th:src="@{/img/view.png}" alt="view" title="View category"></a>
+                        <a th:href="@{/category/delete(id=${c.getId()})}"><img th:src="@{/img/poubelle.png}" alt="delete" title="delete category"></a>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+        </section>
+
+    </div>
+</main>
+
+
+
+
+</body>
+</html>

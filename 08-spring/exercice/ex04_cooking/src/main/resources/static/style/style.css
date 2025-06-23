@@ -1,0 +1,340 @@
+:root{
+    --bg : #fffaea;
+    --light : #fce1aa;
+    --border : #e6bb68;
+    --title : #a76613;
+    --dark : #4b2100;
+    --text : #4b2100;
+}
+*{
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing:    border-box;
+    box-sizing:         border-box;
+}
+html{
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing:    border-box;
+    box-sizing:         border-box;
+    margin:             0;
+    padding:            0;
+    outline:            none;
+}
+
+body {
+    font-family: "Playpen Sans", cursive;
+    font-optical-sizing: auto;
+    font-style: normal;
+    font-size:                16px;
+    background-color: 	var(--bg);
+    color: var(--text);
+    width:                    100%;
+    -webkit-font-smoothing:   antialiased;
+    -webkit-text-size-adjust: 100%;
+    max-width: 1920px;
+    margin: 0 auto;
+    overflow-x:hidden;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing:    border-box;
+    box-sizing:         border-box;
+}
+
+input[type=text], input[type=file], input[type=password], input[type=number], button, select, textarea {
+    font-family:              Verdana, Geneva, Tahoma, sans-serif;
+    font-size:   16px;
+    color:      #000;
+    border:      none;
+}
+
+textarea {
+    resize:   none;
+    overflow: auto;
+}
+
+button, a {cursor: pointer;}
+
+button {
+    background: transparent;
+    border:     none;
+}
+
+a{
+    border:          0;
+    text-decoration: none;
+    color:      inherit;
+}
+
+video {
+    max-width: 100%;
+    height:    auto;
+}
+
+table {border-collapse: collapse;}
+
+img {
+    border:          none;
+    max-width:       100%;
+    image-rendering: auto;
+    display: block;
+}
+figure{
+    padding: 0;
+    margin-block-start: 0;
+    margin-block-end: 0;
+    margin-inline-start: 0;
+    margin-inline-end: 0;
+}
+
+ul {list-style-type: none;}
+
+ul, ol {list-style-position: inside;}
+
+label {display: block;}
+
+canvas {-ms-touch-action: double-tap-zoom;}
+
+h1, h2, h3, h4, h5 {
+    font-weight: normal;
+    display:     block;
+}
+
+header, nav, footer, section, article, aside, figure, figcaption, mark, time, address {display: block;}
+
+sup, sub {text-transform: none;}
+
+div.center,
+section.center{
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+main{
+    width: 100%;
+    min-height: 100vh;
+    flex-flow: column nowrap;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 75px 25px 50px;
+}
+
+header{
+    padding: 15px 25px;
+    position : fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: var(--bg);
+}
+
+header .center{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .center .logo{
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+}
+header .center .logo img{
+    max-width: 30px;
+    margin-right: 15px;
+}
+
+header .center nav{
+    max-width: calc(100% - 200px);
+    display: flex;
+    justify-content: space-between;
+}
+header .center nav a{
+    letter-spacing: 2px;
+    font-weight: 600;
+    color: var(--dark);
+    position: relative;
+    font-size: 13px;
+}
+header .center nav a::after{
+    content: "";
+    position: absolute;
+    left:0;
+    bottom: -2px;
+    width: 100%;
+    height: 1px;
+    background-color: var(--text);
+}
+header .center nav a + a{
+    margin-left: 15px;
+}
+
+a.btn, button.btn{
+    display: inline-block;
+    color: var(--light);
+    background-color: var(--dark);
+    border: 1px solid var(--dark);
+    padding: 10px 15px 8px;
+    letter-spacing: 2px;
+    font-size: 13px;
+    text-transform: uppercase;
+    transition: all 0.5s;
+    width: max-content;
+    width: -moz-max-content;
+    max-width: 100%;
+    text-align: center;
+    border-radius: 30px;
+}
+main.home{
+    height: 100vh;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    justify-content: center;
+}
+main.home > .center{
+    height: 100%;
+    width: 100%;
+    background: url("../img/home.jpg");
+    background-size: 100% 100%;
+    border-radius: 60px;
+}
+main.home > .center h1{
+    padding: 25px 0;
+    color: var(--dark);
+    text-align: center;
+    background-color: rgba(255,250,234, 0.6);
+    margin: 25px;
+    border-radius: 40px;
+}
+
+main > .center h2{
+    text-align: center;
+}
+
+a.back{
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: 600;
+    color: var(--text);
+    position: relative;
+    font-size: 13px;
+}
+
+main.home .options{
+    max-width: 595px;
+    margin: 100px auto 0;
+    display: flex;
+    flex-flow: row wrap;
+}
+main.home .options .option{
+    width: 50%;
+    text-align: center;
+}
+main.home .options .option a{
+    text-decoration: underline;
+    font-size: 20px;
+}
+main.home .options .option img{
+    color: var(--dark);
+    max-width: 75px;
+    margin: 50px auto 0;
+}
+main.list .center > .add{
+    display: block;
+    margin-left: auto;
+}
+main.list .list_of table{
+    margin-top: 45px;
+    width: 100%;
+}
+main.list .list_of table tr{
+    border-bottom: 1px solid var(--border);
+}
+main.list .list_of table thead th:last-child{
+    text-align: right;
+}
+main.list .list_of table thead tr{
+    background-color: var(--border);
+    color: var(--dark);
+    border-bottom: 1px solid var(--border);
+    text-align: left;
+}
+main.list .list_of table td,
+main.list .list_of table th{
+    padding: 10px;
+}
+main.list .list_of table tbody tr:nth-child(even){
+    background-color: var(--light);
+}
+main.list .list_of table th:nth-child(1),
+main.list .list_of table th:nth-child(1),
+main.list .list_of table td:nth-child(2),
+main.list .list_of table td:nth-child(2){
+    width: calc((100% / 2) - 70px);
+}
+main.list .list_of table th:last-child,
+main.list .list_of table td:last-child{
+    width: 70px;
+}
+main.list .list_of table .actions{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-end;
+}
+main.list .list_of table .actions a{
+display: block;
+    max-width: 25px;
+}
+form.form fieldset{
+    position: relative;
+    border: 1px solid var(--light);
+    background-color: var(--light);
+    border-radius: 0 0 10px 10px;
+    width: 100%;
+    height: 100%;
+    min-height: 60vh;
+    padding: 35px 20px;
+    background: repeating-linear-gradient(var(--light), var(--light) 31px, var(--dark) 31px, var(--dark) 32px);
+    line-height: 32px;
+    outline: 0;
+    font-size: 22px;
+    letter-spacing: 2px;
+}
+form.form fieldset h1{
+    margin: 26px 0 26px 0;
+}
+form.form fieldset::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: var(--dark);
+    width: 100%;
+    height: 32px;
+}
+form.form fieldset div.field{
+    padding: 15px 0;
+    display: flex;
+    flex-flow: row nowrap;
+}
+form.form fieldset div input,
+form.form fieldset div textarea{
+    background-color: transparent;
+    color: var(--dark);
+}
+form.form fieldset div textarea{
+    height: 25px;
+}
+form.form fieldset select{
+    background-color: transparent;
+}
+form.form .btn{
+    display: block;
+    margin : 25px auto;
+}
+form.form fieldset::after{
+    content: '';
+    background: transparent;
+    border: solid var(--dark);
+
+}

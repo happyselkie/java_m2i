@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>View of Student</title>
+    <span th:replace="~{home :: cssImports}"></span>
+</head>
+<body>
+
+<span th:replace="~{home :: header}"></span>
+
+<main class="student_details">
+    <section class="center">
+        <h1><span th:text="${type == 'edit' ? 'Edit ' + student.getFirstName() +' '+student.getLastName()  : 'Add a new student'}"></span></h1>
+        <article>
+            <div class="portrayal">
+                <img th:src="@{/img/person.png}" alt="default picture">
+            </div>
+
+            <form method="post" th:action="@{${action}}" th:object="${student}" class="form register">
+                <input type="hidden" th:field="*{id}" th:value="${type == 'edit' ? student.getId() : ''}">
+                <fieldset>
+                    <label class="half"><span>First Name</span>
+                        <input type="text" th:field="*{firstName}" th:value="${type == 'edit' ? student.getFirstName() : ''}" />
+                    </label>
+                    <label class="half"><span>Last Name</span>
+                        <input type="text" th:field="*{lastName}" th:value="${type == 'edit' ? student.getLastName() : ''}" />
+                    </label>
+                    <label class="half"><span>Age</span>
+                        <input type="number" th:field="*{age}" th:value="${type == 'edit' ? student.getAge() : ''}" />
+                    </label>
+                    <label class="half"><span>Email</span>
+                        <input type="text" th:field="*{email}" th:value="${type == 'edit' ? student.getEmail() : ''}" />
+                    </label>
+                </fieldset>
+
+                <button class="btn"><span th:text="${type == 'edit' ? 'Edit' : 'Register'}"></span></button>
+            </form>
+
+        </article>
+
+    </section>
+</main>
+
+</body>
+</html>

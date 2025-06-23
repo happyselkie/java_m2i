@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<span th:replace="~{home :: navbar}"></span>
+<h1>Detail</h1>
+    <div>
+        <p>Nom : <span th:text="${student.getLastName()}"></span></p>
+        <p>Prenom : <span th:text="${student.getFirstName()}"></span></p>
+        <p>Age : <span th:text="${student.getAge()}"></span></p>
+        <p>Email : <span th:text="${student.getEmail()}"></span></p>
+    </div>
+<div th:object="${student}">
+    <p>Nom : <span th:text="*{firstName}"></span></p>
+    <p>Prenom : <span th:text="*{lastName}"></span></p>
+    <p>Age : <span th:text="*{age}"></span></p>
+    <p>Email : <span th:text="*{email}"></span></p>
+</div>
+</body>
+</html>

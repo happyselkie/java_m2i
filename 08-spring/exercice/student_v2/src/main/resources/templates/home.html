@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Home</title>
+</head>
+<body>
+    <th:block th:fragment="navbar">
+        <a th:href="@{/}">Accueil</a>
+        <a th:href="@{/formulaire}">Ajouter un etudiant</a>
+        <a th:href="@{/students}">Voir tous les etudiants</a>
+        <form method="get" th:action="@{/students}">
+            <input th:name="search" />
+            <button>Rechercher</button>
+        </form>
+    </th:block>
+<h1>Home</h1>
+</body>
+</html>
