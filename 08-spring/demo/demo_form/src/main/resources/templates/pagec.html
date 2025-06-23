@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Page C</title>
+</head>
+<body>
+<h1>Détail du contact</h1>
+<!--Affichage des details du contact-->
+<p>Nom : <span th:text="${contact.getName()}"></span></p>
+<p>Age : <span th:text="${contact.getAge()}"></span></p>
+<p>Phone : <span th:text="${contact.getPhone()}"></span></p>
+<!--lien pour revenir sur la liste des contacts-->
+<a th:href="@{/list}">Retour Liste</a>
+
+</body>
+</html>

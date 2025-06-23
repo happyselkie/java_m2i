@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Product</title>
+    <th:block th:fragment="cssImports">
+        <link rel="stylesheet" type="text/css" th:href="@{/style/style.css}">
+    </th:block>
+</head>
+<body>
+
+<main class="home">
+    <h1>Welcome to Geek Shopping !</h1>
+    <ul>
+        <li> <a th:href="@{/list}">See all products</a></li>
+        <li th:each="c : ${categories}">
+            <a th:href="@{/search(category=${c}, price=0.0)}">Search product <span th:text="${c.toString()}"></span></a>
+        </li>
+    </ul>
+
+
+    <h2>Searching a product : </h2>
+    <form th:action="@{/search}" th:method="get">
+        <label for="category"> Category :
+            <select name="category" id="category">
+                <option th:each="c : ${categories}" th:value="${c}"><span th:text="${c.toString()}"></span></option>
+            </select>
+        </label>
+        <label for="price"> Price max :
+            <input type="text" id="price" name="price" value="0.0"/>
+        </label>
+
+        <button>Search !</button>
+    </form>
+
+</main>
+
+</body>
+</html>

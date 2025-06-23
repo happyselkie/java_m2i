@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Products list</title>
+    <span th:replace="~{home :: cssImports}"></span>
+</head>
+<body>
+
+<main>
+    <nav>
+        <a th:href="@{/}">Back to homepage</a>
+    </nav>
+
+    <section>
+        <ul th:if="${products != null}">
+            <li th:each="p : ${products}">
+                <a th:href="@{/detail/{id}(id=${p.getId()})}"> <span th:text="${p.getName()}"></span></a>
+            </li>
+        </ul>
+    </section>
+
+</main>
+
+</body>
+</html>

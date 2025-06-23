@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Page A</title>
+</head>
+<body>
+    <h1>Page A</h1>
+
+    <div>
+        <p>Lien vers la page Liste de Contacts route /list dans ContactController</p>
+        <a th:href="@{/list}">Liste de Contacts</a>
+    </div>
+
+    <br>
+
+    <h2>Formulaires : </h2>
+    <nav>
+        <a th:href="@{/formget}">Formulaire get</a>
+        <a th:href="@{/formpost}">Formulaire post</a>
+    </nav>
+
+    <br>
+
+    <h2>Tests : </h2>
+        <div>
+            <p>tester l'url /search</p>
+            <p>Avec une valeur correct</p>
+            <a th:href="@{/search(name='Toto')}">Aller sur /search?name=Toto</a>
+            <p>Avec une valeur incorrect</p>
+            <a th:href="@{/search(name='Inconnu')}">Aller sur /search?name=Inconnu je dois etre rediriger vers /list</a>
+        </div>
+</body>
+</html>

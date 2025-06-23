@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Page B</title>
+</head>
+<body>
+<h1>Liste de contacts</h1>
+<nav>
+<!--    lien de retour vers la page home-->
+    <a th:href="@{/}">Home Page</a>
+</nav>
+
+<div>
+<!--    si ma liste de contact n'est pas null-->
+    <ul th:if="${contacts != null}">
+<!--        je parcours ma liste de contacts-->
+        <li th:each="c : ${contacts}">
+<!--            je creer un lien qui renvoie vers la route /detail/id/le numero de l'id de mon contact-->
+            <a th:href="@{/detail/{id}(id=${c.getId()})}"> <span th:text="${c.getName()}"></span></a>
+        </li>
+    </ul>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,125 @@
+html{
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing:    border-box;
+    box-sizing:         border-box;
+    margin:             0;
+    padding:            0;
+    outline:            none;
+    }
+    
+    body {
+    font-family:              Verdana, Geneva, Tahoma, sans-serif;
+    font-size:                16px;
+    background-color: #000;
+    width:                    100%;
+    -webkit-font-smoothing:   antialiased;
+    -webkit-text-size-adjust: 100%;
+    max-width: 1920px;
+    margin: 0 auto;
+    overflow-x:hidden;
+    }
+    
+    input[type=text], input[type=file], input[type=password], button, select, textarea {
+    font-family:              Verdana, Geneva, Tahoma, sans-serif;
+    font-size:   16px;
+    color:      #000;
+    border:      none;
+    }
+    
+    textarea {
+    resize:   none;
+    overflow: auto;
+    }
+    
+    button, a {cursor: pointer;}
+    
+    button {
+    background: transparent;
+    border:     none;
+    }
+    
+    a{
+    border:          0;
+    text-decoration: none;
+    color:      inherit;
+    }
+    
+    video {
+    max-width: 100%;
+    height:    auto;
+    }
+    
+    table {border-collapse: collapse;}
+    
+    img {
+    border:          none;
+    max-width:       100%;
+    image-rendering: auto;
+    display: block;
+    }
+    figure{
+    padding: 0;
+    margin-block-start: 0;
+    margin-block-end: 0;
+    margin-inline-start: 0;
+    margin-inline-end: 0;
+    }
+    
+    body.nav_chrome img {image-rendering: -webkit-optimize-contrast;}
+    
+    ul {list-style-type: none;}
+    
+    ul, ol {list-style-position: inside;}
+    
+    label {display: block;}
+    
+    canvas {-ms-touch-action: double-tap-zoom;}
+    
+    h1, h2, h3, h4, h5 {
+    font-weight: normal;
+    display:     block;
+    }
+    
+    header, nav, footer, section, article, aside, figure, figcaption, mark, time, address {display: block;}
+    
+    sup, sub {text-transform: none;}
+
+    main{
+        height: 100vh;
+        width: 100%;
+        background-color: #fff;
+        display: flex;
+        align-items: center;
+    }
+
+    .calculus{
+    display: grid;
+    height: calc(100% - 50px);
+    width: 900px;
+    max-width: 100%;
+    margin: 0 auto;
+    grid-template: repeat(7, 1fr) / repeat(4, 1fr) ;
+}
+.screen{
+    grid-row-end: span 2;
+    grid-column-end:span 4 ;
+    background-color: #000;
+}
+.key{
+    background-color: #fff;
+    border-bottom: 1px solid #000;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+}
+.calculus > div + div{
+    border-left: 1px solid #000;
+}
+.key:last-child{
+    grid-column-end:span 2;
+}
+.key:last-child, .key:nth-child(4n + 1){
+    background-color: orange;
+    border-right: 1px solid #000;
+}

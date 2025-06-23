@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="66cfeb87-b6d1-462d-b39c-a8c52cdf26f2" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/../05-jpa/hibernate/src/main/java/org/example/demos/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../05-jpa/hibernate/src/main/java/org/example/demos/entity/Person.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../05-jpa/hibernate/src/main/java/org/example/demos/repository/PersonDAO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../05-jpa/hibernate/src/main/java/org/example/demos/util/SessionSingleton.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../05-jpa/hibernate/src/main/resources/hibernate.cfg.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../05-jpa/hibernate/src/main/resources/hibernate.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../05-jpa/hibernate_ex01/src/main/java/org/example/Test.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../05-jpa/hibernate_ex01/src/main/java/org/example/entity/Product.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../05-jpa/hibernate_ex01/src/main/java/org/example/repository/ProductDAO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../05-jpa/hibernate_ex01/src/main/java/org/example/util/SessionSingleton.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../05-jpa/hibernate_ex01/src/main/resources/hibernate.cfg.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../05-jpa/hibernate_ex01/src/main/resources/hibernate.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../03-design_pattern/design_pattern/src/main/java/org/example/exercices_pattern/pere_noel/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/../03-design_pattern/design_pattern/src/main/java/org/example/exercices_pattern/pere_noel/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../03-design_pattern/design_pattern/src/main/java/org/example/exercices_pattern/pere_noel/decorators/GiftRibbon.java" beforeDir="false" afterPath="$PROJECT_DIR$/../03-design_pattern/design_pattern/src/main/java/org/example/exercices_pattern/pere_noel/decorators/GiftRibbon.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../03-design_pattern/design_pattern/src/main/java/org/example/exercices_pattern/pere_noel/decorators/GiftWrapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/../03-design_pattern/design_pattern/src/main/java/org/example/exercices_pattern/pere_noel/decorators/GiftWrapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../1. java_bases/exercices/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../1. java_bases/exercices/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../1. java_bases/exercices/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../1. java_bases/exercices/src/main/java/org/example/Exercice51.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../1. java_bases/exercices/src/main/java/org/example/Exercice52.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../1. java_bases/exercices/src/main/java/org/example/Exercice53.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../1. java_bases/exercices/src/main/java/org/example/Exercice54.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../1. java_bases/exercices/src/main/java/org/example/Exercice55.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../1. java_bases/exercices/src/main/java/org/example/Exercice56.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../1. java_bases/exercices/src/main/java/org/example/Exercice57.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../1. java_bases/exercices/src/main/java/org/example/Exercice68.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../1. java_bases/exercices/src/main/java/org/example/Exercice69.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../1. java_bases/exercices/src/main/java/org/example/Exercice70.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../1. java_bases/exercices/src/main/java/org/example/Exercice71.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../1. java_bases/exercices/src/main/java/org/example/Exercice72.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../1. java_bases/exercices/src/main/java/org/example/Exercice73.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../1. java_bases/exercices/src/main/java/org/example/Exercice74.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../1. java_bases/exercices/src/main/java/org/example/Exercice75.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../1. java_bases/exercices/src/main/java/org/example/Exercice76.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../1. java_bases/exercices/src/main/java/org/example/Exercice77.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../1. java_bases/exercices/src/main/java/org/example/Exercice78.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../1. java_bases/exercices/src/main/java/org/example/Exercice79.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../1. java_bases/exercices/src/main/java/org/example/Exercice80.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../1. java_bases/exercices/src/main/java/org/example/Exercice81.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../1. java_bases/exercices/src/main/java/org/example/Exercice82.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../1. java_bases/exercices/src/main/java/org/example/Exercice83.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../1. java_bases/exercices/src/main/java/org/example/Exercice84.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../1. java_bases/exercices/src/main/java/org/example/Exercice85.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../1. java_bases/exercices/src/main/java/org/example/Exercice86.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../1. java_bases/exercices/src/main/java/org/example/Exercice87.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../1. java_bases/exercices/src/main/java/org/example/Exercice94.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../1. java_bases/exercices/src/main/java/org/example/Exercice95.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../1. java_bases/exercices/src/main/java/org/example/Exercice96.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../1. java_bases/exercices/src/main/java/org/example/Exercice97.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../1. java_bases/exercices/src/main/java/org/example/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../2. poo/TodoApp-main/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../2. poo/TodoApp-main/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../2. poo/TodoApp-main/docs/UMLdiagram.drawio.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../2. poo/TodoApp-main/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../2. poo/TodoApp-main/src/main/java/org/example/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../2. poo/TodoApp-main/src/main/java/org/example/ihm/Ihm.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../2. poo/TodoApp-main/src/main/java/org/example/model/PriorityTodo.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../2. poo/TodoApp-main/src/main/java/org/example/model/Todo.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../2. poo/TodoApp-main/src/main/java/org/example/service/TodoService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../2. poo/TodoApp-main/src/main/java/org/example/service/TodoServiceImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../2. poo/exercices/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../2. poo/exercices/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../2. poo/exercices/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../2. poo/exercices/src/main/java/org/example/excercice_bonus_salarie_heritage/App.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../2. poo/exercices/src/main/java/org/example/excercice_bonus_salarie_heritage/Ihm.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../2. poo/exercices/src/main/java/org/example/excercice_bonus_salarie_heritage/Salarie.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../2. poo/exercices/src/main/java/org/example/excercice_bonus_salarie_heritage/SalarieLib.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../2. poo/exercices/src/main/java/org/example/excercice_bonus_salarie_heritage/SalarieService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../2. poo/exercices/src/main/java/org/example/exercice1/Chaise.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../2. poo/exercices/src/main/java/org/example/exercice1/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../2. poo/exercices/src/main/java/org/example/exercice2/Film.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../2. poo/exercices/src/main/java/org/example/exercice2/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../2. poo/exercices/src/main/java/org/example/exercice3/Joueur.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../2. poo/exercices/src/main/java/org/example/exercice3/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../2. poo/exercices/src/main/java/org/example/exercice4/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../2. poo/exercices/src/main/java/org/example/exercice4/WaterTank.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../2. poo/exercices/src/main/java/org/example/exercice5/Arbre.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../2. poo/exercices/src/main/java/org/example/exercice5/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../2. poo/exercices/src/main/java/org/example/exercice5/Plantes.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../2. poo/exercices/src/main/java/org/example/exerciceList/Annuaire.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../2. poo/exercices/src/main/java/org/example/exerciceList/App.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../2. poo/exercices/src/main/java/org/example/exerciceList/Company.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../2. poo/exercices/src/main/java/org/example/exercice_bonus_pendu/Jeu.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../2. poo/exercices/src/main/java/org/example/exercice_bonus_pendu/Pendu.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../2. poo/exercices/src/main/java/org/example/exercice_bonus_salarie/App.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../2. poo/exercices/src/main/java/org/example/exercice_bonus_salarie/Salarie.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../2. poo/exercices/src/main/java/org/example/exercice_bonus_watertank/App.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../2. poo/exercices/src/main/java/org/example/exercice_bonus_watertank/WaterTank.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../2. poo/exercices/src/main/java/org/example/exercice_tp/App.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../2. poo/exercices/src/main/java/org/example/exercice_tp/Bulk.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../2. poo/exercices/src/main/java/org/example/exercice_tp/Customer.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../2. poo/exercices/src/main/java/org/example/exercice_tp/Invoice.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../2. poo/exercices/src/main/java/org/example/exercice_tp/Line.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../2. poo/exercices/src/main/java/org/example/exercice_tp/ProductItem.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../2. poo/exercices/src/main/java/org/example/exercice_tp/Products.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../2. poo/exercices/src/main/java/org/example/exercice_tp/Ramette.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../2. poo/exercices/src/main/java/org/example/exercice_tp/Stylo.java" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 8
+}</component>
+  <component name="ProjectId" id="2xixehRs4PrM2mDtDoQ7XIIDXzj" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "git-widget-placeholder": "main",
+    "last_opened_file_path": "C:/Users/Administrateur/Desktop/formation_m2i/04-jdbc",
+    "nodejs_package_manager_path": "npm",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-jdk-9823dce3aa75-fbdcb00ec9e3-intellij.indexing.shared.core-IU-251.25410.129" />
+        <option value="bundled-js-predefined-d6986cc7102b-6a121458b545-JavaScript-IU-251.25410.129" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="66cfeb87-b6d1-462d-b39c-a8c52cdf26f2" name="Changes" comment="" />
+      <created>1748434791843</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1748434791843</updated>
+      <workItem from="1748434792967" duration="4000" />
+      <workItem from="1748943007712" duration="25000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>

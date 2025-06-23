@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="https://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Home</title>
+    <th:block th:fragment="cssImport">
+        <link rel="stylesheet" type="text/css" th:href="@{style/style.css}">
+    </th:block>
+</head>
+<body>
+
+<main>
+
+    <h1>Home</h1>
+
+    <nav>
+        <a th:href="@{page}">Page</a>
+    </nav>
+
+</main>
+
+</body>
+</html>

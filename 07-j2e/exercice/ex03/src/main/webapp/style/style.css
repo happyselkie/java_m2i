@@ -1,0 +1,143 @@
+*{
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing:    border-box;
+    box-sizing:         border-box;
+}
+html{
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing:    border-box;
+    box-sizing:         border-box;
+    margin:             0;
+    padding:            0;
+    outline:            none;
+}
+
+body {
+    font-family:              Verdana, Geneva, Tahoma, sans-serif;
+    font-size:                16px;
+    background-color: #fff;
+    width:                    100%;
+    -webkit-font-smoothing:   antialiased;
+    -webkit-text-size-adjust: 100%;
+    max-width: 1920px;
+    margin: 0 auto;
+    overflow-x:hidden;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing:    border-box;
+    box-sizing:         border-box;
+}
+
+input[type=text], input[type=file], input[type=password], button, select, textarea {
+    font-family:              Verdana, Geneva, Tahoma, sans-serif;
+    font-size:   16px;
+    color:      #000;
+    border:      none;
+}
+
+textarea {
+    resize:   none;
+    overflow: auto;
+}
+
+button, a {cursor: pointer;}
+
+button {
+    background: transparent;
+    border:     none;
+}
+
+a{
+    border:          0;
+    text-decoration: none;
+    color:      inherit;
+}
+
+video {
+    max-width: 100%;
+    height:    auto;
+}
+
+table {border-collapse: collapse;}
+
+img {
+    border:          none;
+    max-width:       100%;
+    image-rendering: auto;
+    display: block;
+}
+figure{
+    padding: 0;
+    margin-block-start: 0;
+    margin-block-end: 0;
+    margin-inline-start: 0;
+    margin-inline-end: 0;
+}
+
+ul {list-style-type: none;}
+
+ul, ol {list-style-position: inside;}
+
+label {display: block;}
+
+canvas {-ms-touch-action: double-tap-zoom;}
+
+h1, h2, h3, h4, h5 {
+    font-weight: normal;
+    display:     block;
+}
+
+header, nav, footer, section, article, aside, figure, figcaption, mark, time, address {display: block;}
+
+sup, sub {text-transform: none;}
+
+main{
+    width: 100%;
+    padding: 50px 15px;
+}
+main > h1, article.tab{
+    width: 800px;
+    margin: 0 auto;
+    max-width: 100%;
+}
+main > h1{
+    display: block;
+    margin-bottom: 25px;
+    text-align: left;
+}
+article.tab{
+    display: flex;
+    flex-flow: row wrap;
+    border-right: 30px;
+}
+article.tab div{
+    width: calc(100%/3);
+    border-bottom: 1px solid #706a6a;
+    border-left: 1px solid #706a6a;
+    padding: 15px;
+}
+article.tab > div:nth-child(3n+3){
+    border-right: 1px solid #706a6a;
+}
+article.tab > div:nth-child(6n+4),
+article.tab > div:nth-child(6n+5),
+article.tab > div:nth-child(6n+6){
+    background-color:#ebebeb;
+}
+article.tab > div:nth-child(6n+1),
+article.tab > div:nth-child(6n+2),
+article.tab > div:nth-child(6n+3){
+    background-color: #d5d5d5;
+}
+article.tab > div:nth-child(1),
+article.tab > div:nth-child(2),
+article.tab > div:nth-child(3){
+    font-weight: 800;
+    background-color: #a8a8a8;
+    border-top: 1px solid #706a6a;
+}
+article.tab > div:nth-child(1){
+    border-top-left-radius: 30px;
+}
+article.tab > div:nth-child(3){
+    border-top-right-radius: 30px;
+}

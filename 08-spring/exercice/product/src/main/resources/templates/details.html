@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Products list</title>
+    <span th:replace="~{home :: cssImports}"></span>
+</head>
+<body>
+<main>
+    <h1><span th:text="${product.getName()}"></span> : </h1>
+    <p> Category : <a th:href="@{/search(category=${product.getCategory()}, price=0.0)}"><span th:text="${product.getCategory().toString()}"></span></a></p>
+    <p> Price : <span th:text="${product.getPrice()}"></span> €</p>
+    <a th:href="@{/list}">Back to Product List</a>
+</main>
+</body>
+</html>

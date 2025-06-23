@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <th:block th:fragment="cssImport">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Caveat+Brush&family=Shadows+Into+Light&display=swap" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" th:href="@{style/style.css}">
+    </th:block>
+</head>
+<body>
+
+<main>
+    <section class="notepad">
+        <div class="top"></div>
+
+        <article class="paper shadows-into-light-regular">
+            <h1>To do list</h1>
+            <p th:if="${todos.isEmpty()}" >Liste Vide !!!</p>
+            <ul th:unless="${todos.isEmpty()}">
+                <li th:each="t : ${todos}">
+                    <input th:if="${t.isDone()}"  type="checkbox" checked="checked">
+                    <a th:unless="${t.isDone()}" class="checkbox" ></a>
+                    <span th:text="${t.getName()}" class="t_name" contenteditable="true"></span>
+                </li>
+            </ul>
+        </article>
+
+    </section>
+</main>
+
+
+
+
+
+</body>
+</html>

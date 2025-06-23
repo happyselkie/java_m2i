@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulaire</title>
+</head>
+<body>
+    <form action="#" method="get" >
+        <fieldset>
+            <legend>Informations personnelles : </legend>
+            <label for="mr">Mr:</label>
+            <input type="radio" name="genre" value="Mr" id="mr" checked>
+            <label for="mme">Mme</label>
+            <input type="radio" name="genre" value="Mme" id="mme">
+    
+            <div>
+                <label for="prenom">Prénom :</label>
+                <input type="text" name="prenom" placeholder="Prénom" id="prenom">
+                <br>
+                <label for="nom">Nom :</label>
+                <input type="text" name="nom" placeholder="Nom" id="nom">
+            </div>
+        </fieldset>
+        <br>
+        <fieldset>
+            <legend>Authentification</legend>
+            <label for="email">Email : </label>
+            <input type="email" name="email" id="email" placeholder="Email">
+            <label for="mdp">Mot de passe :</label>
+            <input type="password" name="mdp" id="mdp">
+        </fieldset>
+        <br>
+        <select name="pays" id="pays">
+            <option value="fr">France</option>
+            <option value="be">Belgique</option>
+            <option value="it">Italie</option>
+            <option value="es">Espagne</option>
+        </select>
+        <br>
+        <br>
+        <div>
+            <label for="terms">Souhaitez-vous recevoir la newsletter ? </label>
+            <input type="checkbox" name="terms" id="terms" checked>
+        </div>
+        <br>
+        <textarea name="message" id="message" placeholder="message">
+
+        </textarea>
+        <br>
+        <br>
+        <button type="submit">Envoyer</button>
+
+        <br>
+    </form>
+</body>
+</html>

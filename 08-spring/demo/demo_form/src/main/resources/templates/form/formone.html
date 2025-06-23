@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<h1>Formulaire get</h1>
+
+<a th:href="@{/}">Homepage</a>
+
+<form method="get" th:action="@{/add}">
+    <fieldset>
+        <div>
+            <label> Nom :
+                <input type="text" th:name="name" />
+            </label>
+        </div>
+        <div>
+            <label> Âge :
+                <input type="number" th:name="age" maxlength="2" />
+            </label>
+        </div>
+        <div>
+            <label> Téléphone :
+                <input type="text" th:name="phone" maxlength="20" />
+            </label>
+        </div>
+    </fieldset>
+
+    <button>Envoyer</button>
+</form>
+
+</body>
+</html>

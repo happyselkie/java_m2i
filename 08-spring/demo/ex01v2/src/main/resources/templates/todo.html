@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <span th:replace="~{home :: cssImport}"></span>
+</head>
+<body>
+<h1>Affichage d'une seul TODO</h1>
+<p>Titre : <span th:text="${todo.getName()}" ></span></p>
+<p>Description : <span th:text="${todo.getDescription()}" ></span></p>
+<p th:if="${todo.isDone()}">Status : fini</p>
+<p th:if="${!todo.isDone()}">Status : en cours</p>
+
+</body>
+</html>

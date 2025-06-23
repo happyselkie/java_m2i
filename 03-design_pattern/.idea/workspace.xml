@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="b90c1d38-fe01-4037-bebb-8becdeedbeba" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/design_pattern/src/main/java/org/example/exercices_pattern/structural/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/design_pattern/src/main/java/org/example/exercices_pattern/structural/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/design_pattern/src/main/java/org/example/exercices_pattern/structural/classes/SimpleText.java" beforeDir="false" afterPath="$PROJECT_DIR$/design_pattern/src/main/java/org/example/exercices_pattern/structural/classes/SimpleText.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/design_pattern/src/main/java/org/example/exercices_pattern/structural/classes/Text.java" beforeDir="false" afterPath="$PROJECT_DIR$/design_pattern/src/main/java/org/example/exercices_pattern/structural/classes/Text.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/design_pattern/src/main/java/org/example/exercices_pattern/structural/classes/TextColor.java" beforeDir="false" afterPath="$PROJECT_DIR$/design_pattern/src/main/java/org/example/exercices_pattern/structural/classes/TextColor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/design_pattern/src/main/java/org/example/exercices_pattern/structural/classes/TextDecorator.java" beforeDir="false" afterPath="$PROJECT_DIR$/design_pattern/src/main/java/org/example/exercices_pattern/structural/classes/TextDecorator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/design_pattern/src/main/java/org/example/exercices_pattern/structural/classes/TextLower.java" beforeDir="false" afterPath="$PROJECT_DIR$/design_pattern/src/main/java/org/example/exercices_pattern/structural/classes/TextLower.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/design_pattern/src/main/java/org/example/exercices_pattern/structural/classes/TextPrefix.java" beforeDir="false" afterPath="$PROJECT_DIR$/design_pattern/src/main/java/org/example/exercices_pattern/structural/classes/TextPrefix.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/design_pattern/src/main/java/org/example/exercices_pattern/structural/classes/TextUpper.java" beforeDir="false" afterPath="$PROJECT_DIR$/design_pattern/src/main/java/org/example/exercices_pattern/structural/classes/TextUpper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../2. poo/TodoApp-main/src/main/java/org/example/service/TodoServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../2. poo/TodoApp-main/src/main/java/org/example/service/TodoServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../2. poo/exercices/src/main/java/org/example/excercice_bonus_salarie_heritage/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/../2. poo/exercices/src/main/java/org/example/excercice_bonus_salarie_heritage/App.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../2. poo/exercices/src/main/java/org/example/excercice_bonus_salarie_heritage/Ihm.java" beforeDir="false" afterPath="$PROJECT_DIR$/../2. poo/exercices/src/main/java/org/example/excercice_bonus_salarie_heritage/Ihm.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../2. poo/exercices/src/main/java/org/example/excercice_bonus_salarie_heritage/Salarie.java" beforeDir="false" afterPath="$PROJECT_DIR$/../2. poo/exercices/src/main/java/org/example/excercice_bonus_salarie_heritage/Salarie.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../2. poo/exercices/src/main/java/org/example/excercice_bonus_salarie_heritage/SalarieService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../2. poo/exercices/src/main/java/org/example/excercice_bonus_salarie_heritage/SalarieService.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "associatedIndex": 7
+}]]></component>
+  <component name="ProjectId" id="2xOZJUHxw4VBKY4SbDzPS0vkYrV" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "git-widget-placeholder": "main",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/Administrateur/Desktop/formation_m2i/03-design_pattern"
+  }
+}]]></component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="b90c1d38-fe01-4037-bebb-8becdeedbeba" name="Changes" comment="" />
+      <created>1747811008835</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1747811008835</updated>
+    </task>
+    <servers />
+  </component>
+</project>
