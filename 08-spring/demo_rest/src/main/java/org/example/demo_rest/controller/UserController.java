@@ -1,8 +1,8 @@
 package org.example.demo_rest.controller;
 
+import jakarta.validation.Valid;
 import org.example.demo_rest.dto.UserReceiveDto;
 import org.example.demo_rest.dto.UserResponseDto;
-import org.example.demo_rest.entity.User;
 import org.example.demo_rest.service.UserService;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -27,7 +27,7 @@ public class UserController {
     public ResponseEntity<UserResponseDto> getById(@PathVariable Long id) { return ResponseEntity.ok(userService.get(id)); }
 
     @PostMapping
-    public ResponseEntity<UserResponseDto> create(@RequestBody UserReceiveDto user) { return ResponseEntity.status(HttpStatus.CREATED).body(userService.create(user)); }
+    public ResponseEntity<UserResponseDto> create(@Valid @RequestBody UserReceiveDto user) { return ResponseEntity.status(HttpStatus.CREATED).body(userService.create(user)); }
 
     @PutMapping("/{id}")
     public ResponseEntity<UserResponseDto> update(@PathVariable Long id, @RequestBody UserReceiveDto user) { return ResponseEntity.ok(userService.update(id, user));}
