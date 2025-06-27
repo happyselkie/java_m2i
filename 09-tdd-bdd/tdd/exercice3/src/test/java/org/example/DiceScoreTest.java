@@ -1,5 +1,5 @@
-import org.example.DiceScore;
-import org.example.Ide;
+package org.example;
+
 import org.junit.Assert;
 import org.junit.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
