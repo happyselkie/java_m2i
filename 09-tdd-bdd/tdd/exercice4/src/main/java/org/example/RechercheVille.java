@@ -14,7 +14,7 @@ public class RechercheVille {
 
     public List<String> rechercher(String mot)  {
         if (mot.length() < 2){
-            if (mot == "*") return villes;
+            if (mot.equals("*")) return villes;
             throw new NotFoundException("Cette ville n'existe pas");
         }
         if (mot.length() == 2) {
@@ -23,10 +23,6 @@ public class RechercheVille {
             return villes.stream().filter(v -> v.toLowerCase().contains(mot.toLowerCase())).toList();
         }
     }
-
-
-
-
 
     public List<String> getVilles() {
         return villes;

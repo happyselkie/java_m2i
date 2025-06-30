@@ -20,16 +20,16 @@ public class RechercheVilleTest {
 
 
     @Test
-    public void whenSearchWithV_ThenThrowException(){
+    public void whenSearchWithV_ThenThrowNotFoundException(){
         String search = "V";
 
-        rechercheVille.rechercher(search);
+       // rechercheVille.rechercher(search);
 
         Assertions.assertThrows(NotFoundException.class, () -> {rechercheVille.rechercher(search);});
     }
 
     @Test
-    public void whenSearchWith_VA_ThenNamesStartingWith_VA(){
+    public void whenSearchWith_Va_ThenNamesStartingWith_Va(){
         String search = "Va";
 
         List<String> result = rechercheVille.rechercher(search);
@@ -38,7 +38,7 @@ public class RechercheVilleTest {
     }
 
     @Test
-    public void whenSearchWithCaseSensitive_VA_ThenNamesStartingWith_VA(){
+    public void whenSearchWithCaseSensitive_VA_ThenNamesStartingWith_Va(){
         String search = "VA";
 
         List<String> result = rechercheVille.rechercher(search);
