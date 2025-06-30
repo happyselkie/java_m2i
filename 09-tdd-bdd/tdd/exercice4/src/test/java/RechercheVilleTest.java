@@ -14,8 +14,8 @@ public class RechercheVilleTest {
 
     @BeforeEach
     public void setup(){
-        rechercheVille = new RechercheVille();
-        villes = rechercheVille.getVilles();
+        villes = List.of("Paris", "Budapest", "Skopje", "Rotterdam", "Valence", "Vancouver", "Amsterdam", "Vienne", "Sydney", "New York", "Londres", "Bangkok", "Hong Kong", "Dubaï", "Rome", "Istanbul");
+        rechercheVille = new RechercheVille(villes);
     }
 
 

@@ -8,8 +8,8 @@ import java.util.stream.Collectors;
 public class RechercheVille {
     private List<String> villes;
 
-    public RechercheVille() {
-        this.villes = List.of("Paris", "Budapest", "Skopje", "Rotterdam", "Valence", "Vancouver", "Amsterdam", "Vienne", "Sydney", "New York", "Londres", "Bangkok", "Hong Kong", "Dubaï", "Rome", "Istanbul");
+    public RechercheVille(List<String> villes) {
+        this.villes = villes;
     }
 
     public List<String> rechercher(String mot)  {
