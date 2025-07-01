@@ -33,12 +33,16 @@ public class CommandSteps {
         products.add("one");
         products.add("two");
         command.setProducts(products);
-        Assert.assertEquals(2, command.getProducts().size());
     }
 
     @And("the command comes from Customer {string}")
     public void theCommandComesFromCustomer(String customerName) {
         Assert.assertEquals(customerName, command.getFrom());
+    }
+
+    @And("the command has two products")
+    public void theCommandHasTwoProducts() {
+        Assert.assertEquals(command.getProducts().size(),2);
     }
 
 }

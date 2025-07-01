@@ -11,5 +11,5 @@ Feature: Command Ordering
     Scenario: Creation of command with two products
       Given Customer "Michel" who want to command for someone
       When a command is make for someone
-      Then there is two products in the Command
-      And the command comes from Customer "Michel"
+      Then Customer add two products in command
+      And the command has two products
