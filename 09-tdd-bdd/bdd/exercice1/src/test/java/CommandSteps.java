@@ -27,17 +27,17 @@ public class CommandSteps {
         Assert.assertTrue(command.getProducts().isEmpty());
     }
 
+    @And("the command comes from Customer {string}")
+    public void theCommandComesFromCustomer(String customerName) {
+        Assert.assertEquals(customerName, command.getFrom());
+    }
+
     @Then("there is two products in the Command")
     public void thereIsTwoProductsInTheCommand() {
         List<String> products = command.getProducts();
         products.add("one");
         products.add("two");
         command.setProducts(products);
-    }
-
-    @And("the command comes from Customer {string}")
-    public void theCommandComesFromCustomer(String customerName) {
-        Assert.assertEquals(customerName, command.getFrom());
     }
 
     @And("the command has two products")
