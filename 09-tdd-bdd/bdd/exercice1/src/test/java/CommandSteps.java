@@ -32,7 +32,7 @@ public class CommandSteps {
         Assert.assertEquals(customerName, command.getFrom());
     }
 
-    @Then("there is two products in the Command")
+    @Then("Customer add two products in command")
     public void thereIsTwoProductsInTheCommand() {
         List<String> products = command.getProducts();
         products.add("one");
