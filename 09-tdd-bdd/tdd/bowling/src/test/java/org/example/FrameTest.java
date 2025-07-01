@@ -1,6 +1,5 @@
-import org.example.BowlingBall;
-import org.example.Frame;
-import org.example.exception.IllegalRollException;
+package org.example;
+
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
