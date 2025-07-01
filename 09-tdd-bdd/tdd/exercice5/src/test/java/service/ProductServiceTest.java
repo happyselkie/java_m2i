@@ -17,6 +17,14 @@ public class ProductServiceTest {
     }
 
     @Test
+    public void whenUpdate_thenSellInDowngrade(){
+        Product product = new Product("Pomme", "fruit", 10, 10);
+        productService.update(product);
+
+        Assertions.assertEquals(9, product.getQuality());
+    }
+
+    @Test
     public void whenSellIn_0_ThenQualityDowngradeTwice(){
         Product product = new Product("Banane", "fruit", 1, 10);
         productService.update(product);
