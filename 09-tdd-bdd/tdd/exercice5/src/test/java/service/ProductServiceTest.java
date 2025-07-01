@@ -21,7 +21,7 @@ public class ProductServiceTest {
         Product product = new Product("Pomme", "fruit", 10, 10);
         productService.update(product);
 
-        Assertions.assertEquals(9, product.getQuality());
+        Assertions.assertEquals(9, product.getSellIn());
     }
 
     @Test
