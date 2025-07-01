@@ -32,7 +32,8 @@ public class CommandSteps {
         List<String> products = command.getProducts();
         products.add("one");
         products.add("two");
-        Assert.assertEquals(2, products.size());
+        command.setProducts(products);
+        Assert.assertEquals(2, command.getProducts().size());
     }
 
     @And("the command comes from Customer {string}")
