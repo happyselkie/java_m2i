@@ -25,11 +25,26 @@ public class ProductServiceTest {
     }
 
     @Test
+    public void whenSellInUnder_0_ThenRaiseInvalidArgumentException(){
+        Product product = new Product("Pomme", "fruit", 0, 10);
+
+        Assertions.assertThrows(InvalidArgumentException.class, () -> {productService.update(product);});
+    }
+
+    @Test
     public void whenSellIn_0_ThenQualityDowngradeTwice(){
         Product product = new Product("Banane", "fruit", 1, 10);
         productService.update(product);
 
         Assertions.assertEquals(8, product.getQuality());
+    }
+
+    @Test
+    public void whenSellInLaitier_0_ThenQualityDowngradeFast(){
+        Product product = new Product("Crème", "laitier", 1, 10);
+        productService.update(product);
+
+        Assertions.assertEquals(6, product.getQuality());
     }
 
     @Test

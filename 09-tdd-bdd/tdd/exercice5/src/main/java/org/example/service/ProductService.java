@@ -9,7 +9,8 @@ public class ProductService {
         product.setSellIn(product.getSellIn()-1);
         int decrement = 1;
         if (product.getSellIn() <= 0){
-            decrement = 2;
+            if(product.getSellIn() == 0) decrement = 2;
+            else throw new InvalidArgumentException("Le SellIn ne peut pas être inférieure à 0");
         }
 
         if (product.getType().equals("laitier")) {
