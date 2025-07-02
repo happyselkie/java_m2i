@@ -1,17 +1,17 @@
-package org.example.product.controller;
+package org.example.customer.controller;
 
-import org.example.product.model.Product;
+import org.example.customer.model.Customer;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@RequestMapping("product")
-public class ProductController {
+@RequestMapping("customer")
+public class CustomerController {
     @GetMapping("/{id}")
-    public Product getProduct(@PathVariable int id) {
-        return new Product(id, "fromage",2.5 );
+    public Customer getCustomer(@PathVariable int id) {
+        return new Customer(id, "Toto");
     }
 
 }

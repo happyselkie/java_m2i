@@ -1,4 +1,4 @@
-package org.example.product.model;
+package org.example.customer.model;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -9,8 +9,7 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
-public class Product {
+public class Customer {
     private int id;
     private String name;;
-    private double price;
 }
