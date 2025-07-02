@@ -4,6 +4,9 @@ import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import org.example.order.dto.OrderResponseDto;
+
+import static org.apache.tomcat.util.net.openssl.OpenSSLStatus.getName;
 
 @Data
 @NoArgsConstructor
@@ -14,4 +17,13 @@ public class Order {
     private String description;
     private Customer customer;
     private Product product;
+
+    public OrderResponseDto entityToDto() {
+        return OrderResponseDto.builder()
+                .description(getDescription())
+                .customer(getCustomer().entityToDto())
+                .product(getProduct().entityToDto())
+                .build();
+    }
+
 }
