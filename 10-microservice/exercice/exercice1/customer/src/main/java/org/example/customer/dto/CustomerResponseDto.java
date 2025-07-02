@@ -1,4 +1,4 @@
-package org.example.product.dto;
+package org.example.customer.dto;
 
 
 import lombok.AllArgsConstructor;
@@ -10,7 +10,6 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @Data
 @Builder
-public class ProductResponseDto {
+public class CustomerResponseDto {
     private String name;
-    private double price;
 }

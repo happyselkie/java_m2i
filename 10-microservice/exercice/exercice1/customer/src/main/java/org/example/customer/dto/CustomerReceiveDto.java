@@ -1,22 +1,21 @@
-package org.example.product.dto;
+package org.example.customer.dto;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import org.example.product.model.Product;
+import org.example.customer.model.Customer;
 
 @NoArgsConstructor
 @AllArgsConstructor
 @Data
-public class ProductReceiveDto {
+public class CustomerReceiveDto {
 
     private String name;
     private double price;
 
-    public Product dtoToEntity(){
-        return Product.builder()
+    public Customer dtoToEntity(){
+        return Customer.builder()
                 .name(getName())
-                .price(getPrice())
                 .build();
     }
 }
