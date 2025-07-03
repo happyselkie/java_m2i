@@ -1,6 +1,7 @@
 package org.example.order.util;
 
 import org.springframework.http.*;
+import org.springframework.web.client.RestClientException;
 import org.springframework.web.client.RestTemplate;
 
 import java.util.List;
@@ -21,12 +22,13 @@ public class RestClient<T> {
     }
 
     public T get(Class<T> responseType) {
-        HttpEntity<String> requestEntity = new HttpEntity<String>("", headers);
-        ResponseEntity<T> response = restTemplate.exchange(url, HttpMethod.GET, requestEntity, responseType);
-        if (response.getStatusCode().is2xxSuccessful() && response.hasBody()) {
-            return response.getBody();
+        try{
+            HttpEntity<String> requestEntity = new HttpEntity<String>("", headers);
+            ResponseEntity<T> response = restTemplate.exchange(url, HttpMethod.GET, requestEntity, responseType);
+            return response.hasBody() ? response.getBody() : null;
+        } catch (RestClientException e){
+            return null;
         }
-        return null;
     }
 
 
