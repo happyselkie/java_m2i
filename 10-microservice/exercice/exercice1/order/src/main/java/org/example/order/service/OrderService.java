@@ -27,15 +27,7 @@ public class OrderService {
         restTemplate = new RestTemplate();
     }
 
-    public OrderResponseDto create(OrderReceiveDto orderReceiveDto){
-        Order order = orderRepository.save(orderReceiveDto.dtoToEntity());
-        CustomerResponseDto customer = getCustomer(order.getCustomerId());
-        ProductResponseDto product = getProduct(order.getProductId());
-        return new OrderResponseDto(order.getDescription(), customer, product);
-    }
-
-    public OrderResponseDto get(Integer id){
-        Order order = orderRepository.findById(id).orElseThrow(NotFoundException::new);
+    public OrderResponseDto orderToOrderResponseDto(Order order) {
         CustomerResponseDto customer = getCustomer(order.getCustomerId());
         ProductResponseDto product = getProduct(order.getProductId());
         return new OrderResponseDto(order.getDescription(), customer, product);
@@ -53,15 +45,20 @@ public class OrderService {
         return product.entityToDto();
     }
 
+    public OrderResponseDto create(OrderReceiveDto orderReceiveDto){
+        return orderToOrderResponseDto(orderRepository.save(orderReceiveDto.dtoToEntity()));
+    }
+
+    public OrderResponseDto get(Integer id){
+        return orderToOrderResponseDto(orderRepository.findById(id).orElseThrow(NotFoundException::new));
+    }
+
     public List<OrderResponseDto> get(){
         List<OrderResponseDto> responses = new ArrayList<>();
         for(Order order : orderRepository.findAll()){
-            CustomerResponseDto customer = getCustomer(order.getCustomerId());
-            ProductResponseDto product = getProduct(order.getProductId());
-            OrderResponseDto orderResponseDto = new OrderResponseDto(order.getDescription(), customer, product);
+            OrderResponseDto orderResponseDto = orderToOrderResponseDto(order);
             responses.add(orderResponseDto);
         }
-
         return responses;
     }
 
@@ -71,12 +68,7 @@ public class OrderService {
         orderToUpdate.setDescription(orderGet.getDescription());
         orderToUpdate.setCustomerId(orderGet.getCustomerId());
         orderToUpdate.setProductId(orderGet.getProductId());
-
-        Order order = orderRepository.save(orderToUpdate);
-        CustomerResponseDto customer = getCustomer(order.getCustomerId());
-        ProductResponseDto product = getProduct(order.getProductId());
-
-        return new OrderResponseDto(order.getDescription(), customer, product);
+        return orderToOrderResponseDto(orderRepository.save(orderToUpdate));
     }
 
     public void delete(Integer id){ orderRepository.deleteById(id); }
