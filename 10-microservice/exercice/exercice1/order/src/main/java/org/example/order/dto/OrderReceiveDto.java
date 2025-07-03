@@ -14,14 +14,14 @@ public class OrderReceiveDto {
 
     private String name;
     private String description;
-    private Customer customer;
-    private Product product;
+    private Long customerId;
+    private Long productId;
 
     public Order dtoToEntity(){
         return Order.builder()
                 .description(getDescription())
-                .customer(getCustomer())
-                .product(getProduct())
+                .customerId(getCustomerId())
+                .productId(getProductId())
                 .build();
     }
 }

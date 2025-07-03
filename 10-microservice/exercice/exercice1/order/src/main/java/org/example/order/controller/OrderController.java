@@ -1,39 +1,37 @@
 package org.example.order.controller;
 
+import org.example.order.dto.OrderReceiveDto;
+import org.example.order.dto.OrderResponseDto;
 import org.example.order.model.Customer;
 import org.example.order.model.Order;
 import org.example.order.model.Product;
+import org.example.order.service.OrderService;
 import org.example.order.util.RestClient;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.*;
 import org.springframework.web.client.RestTemplate;
+
+import java.util.List;
 
 @RestController
 @RequestMapping("/order")
 public class OrderController {
 
     RestTemplate restTemplate = new RestTemplate();
+    private final OrderService orderService;
 
-    @GetMapping("/{id}")
-    public Order getOrder(@PathVariable int id) {
-        Order order = new Order();
-        order.setId(id);
-        order.setDescription("Blabla");
-
-        RestClient<Customer> customerRestClient = new RestClient<>("http://localhost:8080/customer/5");
-        Customer customer = customerRestClient.get(Customer.class);
-
-        RestClient<Product> productRestClient = new RestClient<>("http://localhost:8081/product/12");
-        Product product = productRestClient.get(Product.class);
-
-        order.setCustomer(customer);
-        order.setProduct(product);
-        return order;
+    public OrderController(OrderService orderService) {
+        this.orderService = orderService;
     }
 
+    @GetMapping
+    public ResponseEntity<List<OrderResponseDto>> getAll() { return ResponseEntity.ok(orderService.get()); }
 
+    @PostMapping
+    public ResponseEntity<OrderResponseDto> create(@RequestBody OrderReceiveDto order) { return ResponseEntity.status(HttpStatus.CREATED).body(orderService.create(order)); }
 
+    @GetMapping("/{id}")
+    public ResponseEntity<OrderResponseDto> getById(@PathVariable Integer id) { return ResponseEntity.ok(orderService.get(id)); }
 
 }

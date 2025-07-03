@@ -15,15 +15,7 @@ import static org.apache.tomcat.util.net.openssl.OpenSSLStatus.getName;
 public class Order {
     private Integer id;
     private String description;
-    private Customer customer;
-    private Product product;
 
-    public OrderResponseDto entityToDto() {
-        return OrderResponseDto.builder()
-                .description(getDescription())
-                .customer(getCustomer().entityToDto())
-                .product(getProduct().entityToDto())
-                .build();
-    }
-
+    private Integer customerId;
+    private Integer productId;
 }
