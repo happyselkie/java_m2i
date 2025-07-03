@@ -22,13 +22,12 @@ public class RestClient<T> {
     }
 
     public T get(Class<T> responseType) {
-        try{
-            HttpEntity<String> requestEntity = new HttpEntity<String>("", headers);
-            ResponseEntity<T> response = restTemplate.exchange(url, HttpMethod.GET, requestEntity, responseType);
-            return response.hasBody() ? response.getBody() : null;
-        } catch (RestClientException e){
-            return null;
+        HttpEntity<String> requestEntity = new HttpEntity<String>("", headers);
+        ResponseEntity<T> response = restTemplate.exchange(url, HttpMethod.GET, requestEntity, responseType);
+        if (response.getStatusCode().is2xxSuccessful() && response.hasBody()) {
+            return response.getBody();
         }
+        return null;
     }
 
 

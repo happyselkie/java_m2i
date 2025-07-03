@@ -17,6 +17,6 @@ import org.springframework.web.client.RestTemplate;
 public class OrderResponseDto {
     private String description;
 
-    private CustomerResponseDto customer;
-    private ProductResponseDto product;
+    private Customer customer;
+    private Product product;
 }

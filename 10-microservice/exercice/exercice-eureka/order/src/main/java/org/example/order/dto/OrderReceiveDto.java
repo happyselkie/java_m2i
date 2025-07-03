@@ -12,7 +12,6 @@ import org.example.order.model.Product;
 @Data
 public class OrderReceiveDto {
 
-    private String name;
     private String description;
     private Integer customerId;
     private Integer productId;

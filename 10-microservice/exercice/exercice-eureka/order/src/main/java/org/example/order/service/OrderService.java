@@ -1,9 +1,7 @@
 package org.example.order.service;
 
-import org.example.order.dto.CustomerResponseDto;
 import org.example.order.dto.OrderReceiveDto;
 import org.example.order.dto.OrderResponseDto;
-import org.example.order.dto.ProductResponseDto;
 import org.example.order.exception.NotFoundException;
 import org.example.order.model.Customer;
 import org.example.order.model.Order;
@@ -20,30 +18,31 @@ import java.util.List;
 @Service
 public class OrderService {
 
+    @Autowired
     private final RestTemplate restTemplate;
     private final OrderRepository orderRepository;
 
-    public OrderService(OrderRepository orderRepository) {
+    public OrderService(OrderRepository orderRepository, RestTemplate restTemplate) {
         this.orderRepository = orderRepository;
-        this.restTemplate = new RestTemplate();
+        this.restTemplate = restTemplate;
     }
 
     public OrderResponseDto orderToOrderResponseDto(Order order) {
-        CustomerResponseDto customer = getCustomer(order.getCustomerId());
-        ProductResponseDto product = getProduct(order.getProductId());
+        Customer customer = getCustomer(order.getCustomerId());
+        Product product = getProduct(order.getProductId());
         return new OrderResponseDto(order.getDescription(), customer, product);
     }
 
-    public CustomerResponseDto getCustomer(Integer id){
+    public Customer getCustomer(Integer id){
         RestClient<Customer> customerRestClient = new RestClient<>("http://CUSTOMER/customer/"+id, restTemplate);
         Customer customer = customerRestClient.get(Customer.class);
-        return customer.entityToDto();
+        return customer;
     }
 
-    public ProductResponseDto getProduct(Integer id){
+    public Product getProduct(Integer id){
         RestClient<Product> productRestClient = new RestClient<>("http://PRODUCT/product/"+id, restTemplate);
         Product product = productRestClient.get(Product.class);
-        return product.entityToDto();
+        return product;
     }
 
     public OrderResponseDto create(OrderReceiveDto orderReceiveDto){
