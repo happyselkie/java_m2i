@@ -37,7 +37,7 @@ public class PersonController {
         person.setId(id);
         person.setName("Tata");
         //http://localhost:8081/personne/detail/2
-        RestClient<Address> adressClient = new RestClient<>("http://ADDRESS/address/"+id);
+        RestClient<Address> adressClient = new RestClient<>("http://ADDRESS/address/"+id, restTemplate);
         Address address = adressClient.get(Address.class);
         person.setAddress(address);
         return person;
