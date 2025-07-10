@@ -15,19 +15,15 @@ public class TodoController {
     }
 
 
-    //@RequestMapping("/todo")
     @GetMapping("/todo")
     public String getOneTodo(Model model){
-        System.out.println("cette route dois renvoyer vers une page qui affiche une seul todo");
         model.addAttribute("todo",todoService.getTodos().get(3));
         return "todo";
     }
 
 
-    //@RequestMapping("/todos")
     @GetMapping("/")
     public String getAllTodos(Model model){
-        System.out.println("cette route dois renvoyer vers une page qui affiche toutes les todos");
         model.addAttribute("todos",todoService.getTodos());
         return "todos";
     }

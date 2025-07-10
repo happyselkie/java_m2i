@@ -19,10 +19,7 @@ public class TodoService {
         this.todos.add(new Todo("todo1","description 1",true));
         this.todos.add(new Todo("todo2","description 2",false));
         this.todos.add(new Todo("todo3","description 3",true));
-        this.todos.add(new Todo("todo3","description 3",true));
-        this.todos.add(new Todo("todo3","description 3",true));
-        this.todos.add(new Todo("todo3","description 3",true));
-        this.todos.add(new Todo("todo3","description 3",true));
-        this.todos.add(new Todo("todo3","description 3",true));
+        this.todos.add(new Todo("todo4","description 4",true));
+
     }
 }

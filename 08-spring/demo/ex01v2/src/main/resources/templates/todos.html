@@ -21,8 +21,10 @@
             <p th:if="${todos.isEmpty()}" >Liste Vide !!!</p>
             <ul th:unless="${todos.isEmpty()}">
                 <li th:each="t : ${todos}">
-                    <input th:if="${t.isDone()}"  type="checkbox" checked="checked">
-                    <a th:unless="${t.isDone()}" class="checkbox" ></a>
+                    <input th:if="${t.isDone()}" type="checkbox" name="isDone" checked >
+                    <input th:unless="${t.isDone()}" type="checkbox" name="isDone" >
+                    <!--<a th:if="${t.isDone()}" class="checkbox checked" ></a>
+                    <a th:unless="${t.isDone()}" class="checkbox" ></a>-->
                     <span th:text="${t.getName()}" class="t_name" contenteditable="true"></span>
                 </li>
             </ul>

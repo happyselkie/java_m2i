@@ -172,13 +172,13 @@ main{
 .paper li .checkbox:visited::before,
 .paper li .checkbox:active::before{
     content: "";
+    display: block;
     position: absolute;
     left: 50%;
     top: 50%;
     width: calc(100% - 9px);
     height: calc(100% - 2px);
     transform: translate(-50%, -50%);
-    display: block;
     background: url("../img/check.png");
     background-size: 100% 100%;
 }
