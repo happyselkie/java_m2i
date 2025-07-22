@@ -16,7 +16,7 @@
 
     <div class="content">
         <article class="left">
-            <div class="male">
+            <div class="portrayals male active">
                 <div class="col">
                     <figure class="portrayal active">
                         <img src="assets/img/male1.jpg" alt="Male 1">
@@ -31,7 +31,7 @@
                     </figure>
                 </div>
             </div>
-            <div class="female">
+            <div class="portrayals female">
                 <div class="col">
                    <figure  class="portrayal">
                        <img src="assets/img/female1.jpg" alt="Female 1">
@@ -46,21 +46,45 @@
                    </figure>
                 </div>
             </div>
+            <div class="portrayals other" id="portrayalsOther">
+                <div class="col">
+                    <figure class="portrayal active">
+                        <img src="assets/img/male1.jpg" alt="Male 1">
+                    </figure>
+                    <figure class="portrayal">
+                        <img src="assets/img/male2.jpg" alt="Male 2">
+                    </figure>
+                    <figure  class="portrayal">
+                        <img src="assets/img/female1.jpg" alt="Female 1">
+                    </figure>
+                </div>
+                <div class="col">
+                    <figure  class="portrayal">
+                        <img src="assets/img/male3.jpg" alt="Male 3">
+                    </figure>
+                    <figure  class="portrayal">
+                        <img src="assets/img/female2.jpg" alt="Female 2">
+                    </figure>
+                    <figure  class="portrayal">
+                        <img src="assets/img/female3.jpg" alt="Female 3">
+                    </figure>
+                </div>
+            </div>
 
         </article>
         <article class="right">
             <form action="index" method="post">
                 <div class="genres">Genre :</div>
                 <div class="genres_list">
-                    <label for="male">Male
+                    <label class="choose_genre" data-genre="male" for="male">Male
                         <input type="radio" name="genre" value="male" id="male" checked>
                         <span class="checkmark"></span>
                     </label>
-                    <label for="female">Female
+                    <label class="choose_genre" data-genre="female" for="female">Female
                         <input type="radio" name="genre" value="female" id="female">
                         <span class="checkmark"></span>
                     </label>
-                    <label for="other">Other
+                    <label class="choose_genre" data-genre="other" for="other">Other
                         <input type="radio" name="genre" value="other" id="other">
                         <span class="checkmark"></span>
                     </label>

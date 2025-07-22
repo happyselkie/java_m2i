@@ -16,7 +16,7 @@ const cardName = document.getElementById("cardName");
 const cardAvatar = document.getElementById("cardAvatar");
 const cardDesc = document.getElementById("cardDesc");
 
-const genres = document.querySelectorAll(".genres_list label");
+const genres = document.querySelectorAll(".choose_genre");
 
 const moon = document.querySelector(".moon");
 
@@ -108,6 +108,33 @@ nextBtn.addEventListener("click", (e) =>{
     cardDesc.textContent = description.value;
     cardAvatar.appendChild(document.querySelector(".portrayal.active"))
 });
+
+let dataGenre;
+for (let i = 0; i < genres.length; i++) {
+    let genreLabel = genres[i];
+    genreLabel.onclick = function (e) {
+        e.stopPropagation();
+        dataGenre = this.dataset.genre;
+        let portrayalsGenre = document.querySelectorAll(".portrayals")
+        for (let portrayal of portrayalsGenre){
+            if(portrayal.classList.contains(dataGenre)) {
+                portrayal.classList.add("active");
+                portrayal.children[0].children[0].classList.add("active")
+            }
+            else {
+                portrayal.classList.remove("active");
+                for (let j = 0; j < portrayal.children.length; j++){
+
+                    for (let k = 0; k <  portrayal.children[j].children.length; k++){
+                        portrayal.children[j].children[k].classList.remove("active");
+                    }
+
+                }
+            }
+        }
+    };
+}
+
 
 
 

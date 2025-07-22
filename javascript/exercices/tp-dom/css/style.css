@@ -193,6 +193,13 @@ main > h1{
     height: auto;
     justify-content: center;
     display: flex;
+    opacity: 0;
+    z-index: -1;
+    transition: all .5s;
+}
+.content .left > div.active{
+    opacity: 1;
+    z-index: 2;
 }
 .content .left > div .col{
     margin-right: 15px;
@@ -221,7 +228,8 @@ main > h1{
     position: relative;
     z-index: 1;
 }
-.content .left .female{
+.content .left .female,
+.content .left .other{
     position: absolute;
     top: 0;
     left: 0;
@@ -434,7 +442,10 @@ background-color: #2d2926 !important;
         flex-direction: column;
         align-items: center;
         justify-content: center;
+        opacity: 0;
+        z-index: -1;
     }
+
     .content .left > div .col:nth-child(2){
         padding-top: 0;
     }
