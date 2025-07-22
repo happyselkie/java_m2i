@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <title>Who Are you ?</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/main.js" defer></script>
+</head>
+<body>
+
+<main>
+
+    <h1>Who Are You ?</h1>
+
+    <div class="content">
+        <article class="left">
+            <div class="male">
+                <div class="col">
+                    <figure class="portrayal active">
+                        <img src="assets/img/male1.jpg" alt="Male 1">
+                    </figure>
+                    <figure class="portrayal">
+                        <img src="assets/img/male2.jpg" alt="Male 2">
+                    </figure>
+                </div>
+                <div class="col">
+                    <figure  class="portrayal">
+                        <img src="assets/img/male3.jpg" alt="Male 3">
+                    </figure>
+                </div>
+            </div>
+            <div class="female">
+                <div class="col">
+                   <figure  class="portrayal">
+                       <img src="assets/img/female1.jpg" alt="Female 1">
+                   </figure>
+                    <figure  class="portrayal">
+                        <img src="assets/img/female2.jpg" alt="Female 2">
+                    </figure>
+                </div>
+                <div class="col">
+                   <figure  class="portrayal">
+                       <img src="assets/img/female3.jpg" alt="Female 3">
+                   </figure>
+                </div>
+            </div>
+
+        </article>
+        <article class="right">
+            <form action="index" method="post">
+                <div class="genres">Genre :</div>
+                <div class="genres_list">
+                    <label for="male">Male
+                        <input type="radio" name="genre" value="male" id="male" checked>
+                        <span class="checkmark"></span>
+                    </label>
+                    <label for="female">Female
+                        <input type="radio" name="genre" value="female" id="female">
+                        <span class="checkmark"></span>
+                    </label>
+                    <label for="other">Other
+                        <input type="radio" name="genre" value="other" id="other">
+                        <span class="checkmark"></span>
+                    </label>
+                </div>
+
+                <div class="desc">
+                    <input type="text" name="description" disabled value="" id="description">
+                    <button type="button" class="change_desc" id="changeDesc">Change description</button>
+                </div>
+
+
+                <label for="pseudo">Name : </label>
+                <input type="text" name="pseudo" id="pseudo" />
+                <span class="alert" id="alertPseudo"></span>
+
+                <button type="submit" id="next" disabled>Suivant</button>
+            </form>
+        </article>
+    </div>
+
+    <article class="card" id="cardId">
+        <div class="card-inner">
+            <div class="front"></div>
+            <div class="back">
+                <h2 id="cardName"></h2>
+                <figure id="cardAvatar"></figure>
+                <article id="cardDesc"></article>
+            </div>
+        </div>
+
+    </article>
+
+</main>
+<div class="switch_mode" id="switchMode">
+    <div class="moon">
+    </div>
+</div>
+</body>
+</html>

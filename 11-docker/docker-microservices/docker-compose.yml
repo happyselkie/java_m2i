@@ -1,0 +1,51 @@
+services:
+
+  app:
+    depends_on:
+      - mysql
+    build:
+      context: ./meubles/
+    ports:
+      - "8484:8080"
+    container_name: aeki
+    restart: always
+    environment:
+      - SPRING_DATASOURCE_URL=jdbc:mysql://mysql:3306/docker_spring
+      - SPRING_DATASOURCE_USERNAME=${DB_USER}
+      - SPRING_DATASOURCE_PASSWORD=${DB_PASS}
+    networks:
+      - docker-spring
+
+  mysql:
+    image: mysql:latest
+    container_name: mysql_aeki
+    restart: always
+    ports :
+      - "3308:3306"
+    environment:
+      - MYSQL_ROOT_PASSWORD=${DB_PASS}
+    volumes:
+      - mysql_docker:/var/lib/mysql
+      - ./init.sql:/docker-entrypoint-initdb.d/init.sql
+    networks:
+      - docker-spring
+
+  db_view:
+    depends_on:
+      - mysql
+    image: phpmyadmin:latest
+    container_name: phpmyadmin_aeki
+    restart: always
+    ports:
+      - "8585:80"
+    environment:
+      PMA_HOST: mysql
+    networks:
+      - docker-spring
+
+volumes:
+  mysql_docker:
+
+
+networks:
+  docker-spring:
