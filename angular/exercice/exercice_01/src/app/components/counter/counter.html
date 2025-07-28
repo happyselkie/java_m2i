@@ -1,0 +1,10 @@
+<h1>Counter !</h1>
+
+<section>
+  <p [class]="i % 2 ? 'red' : 'green'" >{{ i }}</p>
+</section>
+
+<section>
+  <button type="button" (click)="increment()">+</button>
+  <button type="button" (click)="decrement()">-</button>
+</section>
